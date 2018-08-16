@@ -5,21 +5,29 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.alibaba.dubbo.config.annotation.Service;
-import com.pinyougou.mapper.TbBrandMapper;
-import com.pinyougou.pojo.TbBrand;
+
+import com.baomidou.mybatisplus.service.impl.ServiceImpl;
+import com.pinyougou.entity.Brand;
+import com.pinyougou.mapper.BrandMapper;
 import com.pinyougou.sellergoods.service.BrandService;
 
+/**
+ * <p>
+ *  服务实现类
+ * </p>
+ *
+ * @author R.Ding
+ * @since 2018-08-14
+ */
 @Service
-public class BrandServiceImpl implements BrandService {
+public class BrandServiceImpl extends ServiceImpl<BrandMapper, Brand> implements BrandService {
 
 	@Autowired
-	private TbBrandMapper brandMapper;
+	private BrandMapper brandMapper;
 	
 	@Override
-	public List<TbBrand> findAll() {
-		
-		return brandMapper.selectByExample(null);
-		
+	public List<Brand> findAll() {
+		return brandMapper.getBrandList();
 	}
-
+	
 }

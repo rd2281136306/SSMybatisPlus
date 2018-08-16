@@ -88,7 +88,6 @@
 		<scope>provided</scope>
 	</dependency>
 
-
 	<dependency>
 		<groupId>com.pinyougou</groupId>
 		<artifactId>pinyougou-sellergoods-interface</artifactId>
@@ -104,7 +103,6 @@
 		<artifactId>pinyougou-common</artifactId>
 		<version>0.0.3-SNAPSHOT</version>
 	</dependency>
-
 	
 	<dependency>
 		<groupId>org.apache.activemq</groupId>
@@ -112,7 +110,6 @@
 		<version>5.13.4</version>
 	</dependency>
     </dependencies>
-  
   
     <build>  
 	  <plugins>

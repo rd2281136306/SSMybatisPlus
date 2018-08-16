@@ -75,13 +75,13 @@
     <bean id="sqlSessionFactory" class="com.baomidou.mybatisplus.spring.MybatisSqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <!-- 自动扫描Mapping.xml文件 -->
-        <property name="mapperLocations" value="classpath*:com/**/mapper/*.xml"/>
+        <property name="mapperLocations" value="classpath*:com/**/mapper/xml/*.xml"/>
         
         <!-- 配置 Mybatis 配置文件（可无） 
         <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"/>
          -->
          <!-- 配置包别名 -->
-        <property name="typeAliasesPackage" value="com.pinyougou.model"/>
+        <property name="typeAliasesPackage" value="com.pinyougou.entity"/>
         <property name="plugins">
             <array>
                 <!-- 分页插件配置 -->

@@ -1,15 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.pinyougou</groupId>
-    <artifactId>pinyougou-parent</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
-  </parent>
-  <artifactId>pinyougou-seckill-web</artifactId>
-  <packaging>war</packaging>
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+	  <groupId>com.pinyougou</groupId>
+	  <artifactId>pinyougou-parent</artifactId>
+	  <version>0.0.3-SNAPSHOT</version>
+	</parent>
+	<artifactId>pinyougou-seckill-web</artifactId>
+	<packaging>war</packaging>
   
     
-   <dependencies>
+   	<dependencies>
     <!-- Spring -->
 	<dependency>
 		<groupId>org.springframework</groupId>
@@ -78,37 +78,30 @@
 		<scope>provided</scope>
 	</dependency>
 	
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-web</artifactId>
-			<!-- <version>4.1.0.RELEASE</version> -->
-		</dependency>
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-web</artifactId>
+	</dependency>
 
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-config</artifactId>
-			<!-- <version>4.1.0.RELEASE</version> -->
-		</dependency>
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-config</artifactId>
+	</dependency>
 
-	
-		
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-cas</artifactId>
-			<!-- <version>4.1.0.RELEASE</version> -->
-		</dependency>
-		<dependency>
-			<groupId>org.jasig.cas.client</groupId>
-			<artifactId>cas-client-core</artifactId>
-			<!-- <version>3.3.3</version> -->
-			<exclusions>
-				<exclusion>
-					<groupId>org.slf4j</groupId>
-					<artifactId>log4j-over-slf4j</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-	
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-cas</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>org.jasig.cas.client</groupId>
+		<artifactId>cas-client-core</artifactId>
+		<exclusions>
+			<exclusion>
+				<groupId>org.slf4j</groupId>
+				<artifactId>log4j-over-slf4j</artifactId>
+			</exclusion>
+		</exclusions>
+	</dependency>
 	
 	<dependency>
 		<groupId>com.pinyougou</groupId>
@@ -127,7 +120,7 @@
 		<artifactId>pinyougou-pay-interface</artifactId>
 		<version>0.0.3-SNAPSHOT</version>
 	</dependency>
-   </dependencies>
+   	</dependencies>
   
   
     <build>  

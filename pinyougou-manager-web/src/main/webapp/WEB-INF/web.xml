@@ -30,7 +30,7 @@
 	  		<param-name>contextConfigLocation</param-name>
 	  		<param-value>classpath:spring/springmvc.xml</param-value>
 	  	</init-param>
-  </servlet>
+  	</servlet>
   
  	<servlet-mapping>
 	  	<servlet-name>springmvc</servlet-name>
@@ -41,12 +41,12 @@
     <context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath:spring/spring-*.xml</param-value>
-	 </context-param>
-	 <!-- 启动监听器 -->
+	</context-param>
+	<!-- 启动监听器 -->
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
-
+	
     <!--监听器出用于主要为了解决java.beans.Introspector导致内存泄漏的问题-->
     <listener>
         <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
