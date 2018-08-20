@@ -5,6 +5,12 @@ import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableName;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 
 /**
@@ -16,6 +22,10 @@ import java.io.Serializable;
  * @since 2018-08-14
  */
 @TableName("tb_seckill_order")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper=true)
 public class SeckillOrder extends Model<SeckillOrder> {
 
     private static final long serialVersionUID = 1L;
@@ -76,103 +86,6 @@ public class SeckillOrder extends Model<SeckillOrder> {
      */
 	@TableField("transaction_id")
 	private String transactionId;
-
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public Long getSeckillId() {
-		return seckillId;
-	}
-
-	public void setSeckillId(Long seckillId) {
-		this.seckillId = seckillId;
-	}
-
-	public BigDecimal getMoney() {
-		return money;
-	}
-
-	public void setMoney(BigDecimal money) {
-		this.money = money;
-	}
-
-	public String getUserId() {
-		return userId;
-	}
-
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
-
-	public String getSellerId() {
-		return sellerId;
-	}
-
-	public void setSellerId(String sellerId) {
-		this.sellerId = sellerId;
-	}
-
-	public Date getCreateTime() {
-		return createTime;
-	}
-
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
-
-	public Date getPayTime() {
-		return payTime;
-	}
-
-	public void setPayTime(Date payTime) {
-		this.payTime = payTime;
-	}
-
-	public String getStatus() {
-		return status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
-	}
-
-	public String getReceiverAddress() {
-		return receiverAddress;
-	}
-
-	public void setReceiverAddress(String receiverAddress) {
-		this.receiverAddress = receiverAddress;
-	}
-
-	public String getReceiverMobile() {
-		return receiverMobile;
-	}
-
-	public void setReceiverMobile(String receiverMobile) {
-		this.receiverMobile = receiverMobile;
-	}
-
-	public String getReceiver() {
-		return receiver;
-	}
-
-	public void setReceiver(String receiver) {
-		this.receiver = receiver;
-	}
-
-	public String getTransactionId() {
-		return transactionId;
-	}
-
-	public void setTransactionId(String transactionId) {
-		this.transactionId = transactionId;
-	}
 
 	@Override
 	protected Serializable pkVal() {

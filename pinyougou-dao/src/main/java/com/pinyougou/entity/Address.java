@@ -1,12 +1,18 @@
 package com.pinyougou.entity;
 
-import com.baomidou.mybatisplus.enums.IdType;
-import java.util.Date;
-import com.baomidou.mybatisplus.annotations.TableId;
-import com.baomidou.mybatisplus.annotations.TableField;
-import com.baomidou.mybatisplus.activerecord.Model;
-import com.baomidou.mybatisplus.annotations.TableName;
 import java.io.Serializable;
+import java.util.Date;
+
+import com.baomidou.mybatisplus.activerecord.Model;
+import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.enums.IdType;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 /**
  * <p>
@@ -17,6 +23,10 @@ import java.io.Serializable;
  * @since 2018-08-14
  */
 @TableName("tb_address")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper=true)
 public class Address extends Model<Address> {
 
     private static final long serialVersionUID = 1L;
@@ -73,103 +83,6 @@ public class Address extends Model<Address> {
      * 别名
      */
 	private String alias;
-
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getUserId() {
-		return userId;
-	}
-
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
-
-	public String getProvinceId() {
-		return provinceId;
-	}
-
-	public void setProvinceId(String provinceId) {
-		this.provinceId = provinceId;
-	}
-
-	public String getCityId() {
-		return cityId;
-	}
-
-	public void setCityId(String cityId) {
-		this.cityId = cityId;
-	}
-
-	public String getTownId() {
-		return townId;
-	}
-
-	public void setTownId(String townId) {
-		this.townId = townId;
-	}
-
-	public String getMobile() {
-		return mobile;
-	}
-
-	public void setMobile(String mobile) {
-		this.mobile = mobile;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public String getContact() {
-		return contact;
-	}
-
-	public void setContact(String contact) {
-		this.contact = contact;
-	}
-
-	public String getIsDefault() {
-		return isDefault;
-	}
-
-	public void setIsDefault(String isDefault) {
-		this.isDefault = isDefault;
-	}
-
-	public String getNotes() {
-		return notes;
-	}
-
-	public void setNotes(String notes) {
-		this.notes = notes;
-	}
-
-	public Date getCreateDate() {
-		return createDate;
-	}
-
-	public void setCreateDate(Date createDate) {
-		this.createDate = createDate;
-	}
-
-	public String getAlias() {
-		return alias;
-	}
-
-	public void setAlias(String alias) {
-		this.alias = alias;
-	}
 
 	@Override
 	protected Serializable pkVal() {

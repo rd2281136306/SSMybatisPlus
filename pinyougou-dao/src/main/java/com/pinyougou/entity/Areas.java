@@ -1,10 +1,16 @@
 package com.pinyougou.entity;
 
-import com.baomidou.mybatisplus.enums.IdType;
-import com.baomidou.mybatisplus.annotations.TableId;
-import com.baomidou.mybatisplus.activerecord.Model;
-import com.baomidou.mybatisplus.annotations.TableName;
 import java.io.Serializable;
+
+import com.baomidou.mybatisplus.activerecord.Model;
+import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.enums.IdType;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 /**
  * <p>
@@ -15,6 +21,10 @@ import java.io.Serializable;
  * @since 2018-08-14
  */
 @TableName("tb_areas")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper=true)
 public class Areas extends Model<Areas> {
 
     private static final long serialVersionUID = 1L;
@@ -36,39 +46,6 @@ public class Areas extends Model<Areas> {
      * 城市ID
      */
 	private String cityid;
-
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public String getAreaid() {
-		return areaid;
-	}
-
-	public void setAreaid(String areaid) {
-		this.areaid = areaid;
-	}
-
-	public String getArea() {
-		return area;
-	}
-
-	public void setArea(String area) {
-		this.area = area;
-	}
-
-	public String getCityid() {
-		return cityid;
-	}
-
-	public void setCityid(String cityid) {
-		this.cityid = cityid;
-	}
 
 	@Override
 	protected Serializable pkVal() {

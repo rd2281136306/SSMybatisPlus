@@ -1,6 +1,12 @@
 package com.pinyougou.entity;
 
 import com.baomidou.mybatisplus.enums.IdType;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
@@ -16,6 +22,10 @@ import java.io.Serializable;
  * @since 2018-08-14
  */
 @TableName("tb_specification_option")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper=true)
 public class SpecificationOption extends Model<SpecificationOption> {
 
     private static final long serialVersionUID = 1L;
@@ -39,39 +49,6 @@ public class SpecificationOption extends Model<SpecificationOption> {
      * 排序值
      */
 	private Integer orders;
-
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getOptionName() {
-		return optionName;
-	}
-
-	public void setOptionName(String optionName) {
-		this.optionName = optionName;
-	}
-
-	public Long getSpecId() {
-		return specId;
-	}
-
-	public void setSpecId(Long specId) {
-		this.specId = specId;
-	}
-
-	public Integer getOrders() {
-		return orders;
-	}
-
-	public void setOrders(Integer orders) {
-		this.orders = orders;
-	}
 
 	@Override
 	protected Serializable pkVal() {

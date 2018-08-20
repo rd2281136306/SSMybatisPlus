@@ -5,6 +5,12 @@ import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableName;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 
 /**
@@ -16,6 +22,10 @@ import java.io.Serializable;
  * @since 2018-08-14
  */
 @TableName("tb_pay_log")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper=true)
 public class PayLog extends Model<PayLog> {
 
     private static final long serialVersionUID = 1L;
@@ -65,79 +75,6 @@ public class PayLog extends Model<PayLog> {
      */
 	@TableField("pay_type")
 	private String payType;
-
-
-	public String getOutTradeNo() {
-		return outTradeNo;
-	}
-
-	public void setOutTradeNo(String outTradeNo) {
-		this.outTradeNo = outTradeNo;
-	}
-
-	public Date getCreateTime() {
-		return createTime;
-	}
-
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
-
-	public Date getPayTime() {
-		return payTime;
-	}
-
-	public void setPayTime(Date payTime) {
-		this.payTime = payTime;
-	}
-
-	public Long getTotalFee() {
-		return totalFee;
-	}
-
-	public void setTotalFee(Long totalFee) {
-		this.totalFee = totalFee;
-	}
-
-	public String getUserId() {
-		return userId;
-	}
-
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
-
-	public String getTransactionId() {
-		return transactionId;
-	}
-
-	public void setTransactionId(String transactionId) {
-		this.transactionId = transactionId;
-	}
-
-	public String getTradeState() {
-		return tradeState;
-	}
-
-	public void setTradeState(String tradeState) {
-		this.tradeState = tradeState;
-	}
-
-	public String getOrderList() {
-		return orderList;
-	}
-
-	public void setOrderList(String orderList) {
-		this.orderList = orderList;
-	}
-
-	public String getPayType() {
-		return payType;
-	}
-
-	public void setPayType(String payType) {
-		this.payType = payType;
-	}
 
 	@Override
 	protected Serializable pkVal() {

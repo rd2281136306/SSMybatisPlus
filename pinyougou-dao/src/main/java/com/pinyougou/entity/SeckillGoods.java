@@ -1,6 +1,12 @@
 package com.pinyougou.entity;
 
 import com.baomidou.mybatisplus.enums.IdType;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+
 import java.math.BigDecimal;
 import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableId;
@@ -18,6 +24,10 @@ import java.io.Serializable;
  * @since 2018-08-14
  */
 @TableName("tb_seckill_goods")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper=true)
 public class SeckillGoods extends Model<SeckillGoods> {
 
     private static final long serialVersionUID = 1L;
@@ -94,135 +104,6 @@ public class SeckillGoods extends Model<SeckillGoods> {
      * 描述
      */
 	private String introduction;
-
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public Long getGoodsId() {
-		return goodsId;
-	}
-
-	public void setGoodsId(Long goodsId) {
-		this.goodsId = goodsId;
-	}
-
-	public Long getItemId() {
-		return itemId;
-	}
-
-	public void setItemId(Long itemId) {
-		this.itemId = itemId;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public String getSmallPic() {
-		return smallPic;
-	}
-
-	public void setSmallPic(String smallPic) {
-		this.smallPic = smallPic;
-	}
-
-	public BigDecimal getPrice() {
-		return price;
-	}
-
-	public void setPrice(BigDecimal price) {
-		this.price = price;
-	}
-
-	public BigDecimal getCostPrice() {
-		return costPrice;
-	}
-
-	public void setCostPrice(BigDecimal costPrice) {
-		this.costPrice = costPrice;
-	}
-
-	public String getSellerId() {
-		return sellerId;
-	}
-
-	public void setSellerId(String sellerId) {
-		this.sellerId = sellerId;
-	}
-
-	public Date getCreateTime() {
-		return createTime;
-	}
-
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
-
-	public Date getCheckTime() {
-		return checkTime;
-	}
-
-	public void setCheckTime(Date checkTime) {
-		this.checkTime = checkTime;
-	}
-
-	public String getStatus() {
-		return status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
-	}
-
-	public Date getStartTime() {
-		return startTime;
-	}
-
-	public void setStartTime(Date startTime) {
-		this.startTime = startTime;
-	}
-
-	public Date getEndTime() {
-		return endTime;
-	}
-
-	public void setEndTime(Date endTime) {
-		this.endTime = endTime;
-	}
-
-	public Integer getNum() {
-		return num;
-	}
-
-	public void setNum(Integer num) {
-		this.num = num;
-	}
-
-	public Integer getStockCount() {
-		return stockCount;
-	}
-
-	public void setStockCount(Integer stockCount) {
-		this.stockCount = stockCount;
-	}
-
-	public String getIntroduction() {
-		return introduction;
-	}
-
-	public void setIntroduction(String introduction) {
-		this.introduction = introduction;
-	}
 
 	@Override
 	protected Serializable pkVal() {

@@ -1,6 +1,12 @@
 package com.pinyougou.entity;
 
 import com.baomidou.mybatisplus.enums.IdType;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
@@ -16,6 +22,10 @@ import java.io.Serializable;
  * @since 2018-08-14
  */
 @TableName("tb_specification")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper=true)
 public class Specification extends Model<Specification> {
 
     private static final long serialVersionUID = 1L;
@@ -30,23 +40,6 @@ public class Specification extends Model<Specification> {
      */
 	@TableField("spec_name")
 	private String specName;
-
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getSpecName() {
-		return specName;
-	}
-
-	public void setSpecName(String specName) {
-		this.specName = specName;
-	}
 
 	@Override
 	protected Serializable pkVal() {

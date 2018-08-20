@@ -1,6 +1,12 @@
 package com.pinyougou.entity;
 
 import com.baomidou.mybatisplus.enums.IdType;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+
 import java.math.BigDecimal;
 import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableId;
@@ -18,6 +24,10 @@ import java.io.Serializable;
  * @since 2018-08-14
  */
 @TableName("tb_freight_template")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper=true)
 public class FreightTemplate extends Model<FreightTemplate> {
 
     private static final long serialVersionUID = 1L;
@@ -52,63 +62,6 @@ public class FreightTemplate extends Model<FreightTemplate> {
      */
 	@TableField("create_time")
 	private Date createTime;
-
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getSellerId() {
-		return sellerId;
-	}
-
-	public void setSellerId(String sellerId) {
-		this.sellerId = sellerId;
-	}
-
-	public String getIsDefault() {
-		return isDefault;
-	}
-
-	public void setIsDefault(String isDefault) {
-		this.isDefault = isDefault;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getSendTimeType() {
-		return sendTimeType;
-	}
-
-	public void setSendTimeType(String sendTimeType) {
-		this.sendTimeType = sendTimeType;
-	}
-
-	public BigDecimal getPrice() {
-		return price;
-	}
-
-	public void setPrice(BigDecimal price) {
-		this.price = price;
-	}
-
-	public Date getCreateTime() {
-		return createTime;
-	}
-
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
 
 	@Override
 	protected Serializable pkVal() {

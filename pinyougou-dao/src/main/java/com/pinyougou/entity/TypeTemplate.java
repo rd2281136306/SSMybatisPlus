@@ -1,6 +1,12 @@
 package com.pinyougou.entity;
 
 import com.baomidou.mybatisplus.enums.IdType;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
@@ -16,6 +22,10 @@ import java.io.Serializable;
  * @since 2018-08-14
  */
 @TableName("tb_type_template")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper=true)
 public class TypeTemplate extends Model<TypeTemplate> {
 
     private static final long serialVersionUID = 1L;
@@ -41,47 +51,6 @@ public class TypeTemplate extends Model<TypeTemplate> {
      */
 	@TableField("custom_attribute_items")
 	private String customAttributeItems;
-
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getSpecIds() {
-		return specIds;
-	}
-
-	public void setSpecIds(String specIds) {
-		this.specIds = specIds;
-	}
-
-	public String getBrandIds() {
-		return brandIds;
-	}
-
-	public void setBrandIds(String brandIds) {
-		this.brandIds = brandIds;
-	}
-
-	public String getCustomAttributeItems() {
-		return customAttributeItems;
-	}
-
-	public void setCustomAttributeItems(String customAttributeItems) {
-		this.customAttributeItems = customAttributeItems;
-	}
 
 	@Override
 	protected Serializable pkVal() {

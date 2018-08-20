@@ -2,8 +2,10 @@ package com.pinyougou.sellergoods.service;
 
 import java.util.List;
 
+import com.baomidou.mybatisplus.plugins.Page;
 import com.baomidou.mybatisplus.service.IService;
 import com.pinyougou.entity.Brand;
+import com.pinyougou.entity.searchVo.BrandSearchVo;
 
 /**
  * <p>
@@ -16,5 +18,7 @@ import com.pinyougou.entity.Brand;
 public interface BrandService extends IService<Brand> {
 	
 	public List<Brand> findAll();
+
+	public Page<Brand> selectListPage(BrandSearchVo searchVo);
 	
 }
